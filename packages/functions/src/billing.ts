@@ -4,8 +4,6 @@ import handler from "@sandbox-sst-notes/core/handler";
 import { calculateCost} from "@sandbox-sst-notes/core/cost";
 
 export const main = handler(async (event) =>{
-    console.log("entering billing.main")
-    console.log("event", event)
 
     const { storage, source } = JSON.parse(event.body || "{}");
     const amount = calculateCost(storage)
